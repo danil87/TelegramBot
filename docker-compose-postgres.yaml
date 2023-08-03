@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  db_auth:
+    container_name: telebot
+    ports:
+      - "6101:6101"
+    environment:
+      - POSTGRES_PASSWORD=eL50727z
+      - POSTGRES_USER=admin
+    command:
+      - "postgres"
+      - "-c"
+      - "port=6101"
+    image: postgres:14.3-alpine
